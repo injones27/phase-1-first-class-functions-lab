@@ -36,14 +36,13 @@ const fareTripler = function(factor){
 //     return differentDrivers;
 // }
 
-const selectDifferentDrivers = function (drivers, returnFirstTwoDrivers) {
-    let firstDrivers = drivers.slice();
-    firstDrivers.splice(2, 2);
-    return firstDrivers
+const selectDifferentDrivers = function (drivers, selectedDrivers) {
+    if (selectedDrivers === returnFirstTwoDrivers) {
+        return returnFirstTwoDrivers(drivers);
+    }
+    else if (selectedDrivers === returnLastTwoDrivers) {
+        return returnLastTwoDrivers(drivers);
+    }
+    
 }
-
-const selectDifferentDrivers = function (drivers, returnlastTwoDrivers) {
-    let lastDrivers = drivers.slice();
-    lastDrivers.splice(0, 2);
-    return lastDrivers
-}
+ selectDifferentDrivers()
